@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<style>
+    .divo4ka {
+        width: 200px;
+        height: 200px;
+        display: none;
+    }
+</style>
+<body>
+
+
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--<button id="left">LEFT</button>-->
+
+<!--<div style="background-color: rebeccapurple " class="divo4ka"></div>-->
+<!--<div style="background-color: red " class="divo4ka"></div>-->
+<!--<div style="background-color: chartreuse " class="divo4ka"></div>-->
+<!--<div style="background-color:  dimgrey" class="divo4ka"></div>-->
+<!--<div style="background-color: lightseagreen" class="divo4ka"></div>-->
+
+<!--<button id="right">RIGHT</button>-->
+
+
+<button id="btn">GET USERS</button>
+
+
+<script>
+
+    const button = document.getElementById('btn');
+
+    button.onclick = () => {
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(users => {
+                return users.json()
+            })
+            .then(jsonUsers => {
+                divBuilder(jsonUsers)
+            })
+            .catch(reason => {
+                console.log(reason);
+            })
+    }
+
+    function divBuilder(usersArr) {
+        for (let i = 0; i < usersArr.length; i++) {
+            let userDiv = document.createElement('div');
+            let getMoreInfoBtn = document.createElement('button');
+
+            userDiv.innerText = `${usersArr[i].id} ${usersArr[i].name}`;
+            getMoreInfoBtn.innerText = 'See more...';
+
+            userDiv.style.backgroundColor = 'lightseagreen';
+            userDiv.style.margin = '20px';
+            getMoreInfoBtn.style.margin = '10px';
+
+            document.body.appendChild(userDiv);
+            userDiv.appendChild(getMoreInfoBtn);
+
+            getMoreInfoBtn.onclick = () => {
+                getUserById(usersArr[i].id)
+            }
+        }
+    }
+
+    function getUserById(userId) {
+        fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+            .then(user => {
+                console.log(user);
+                return user.json()
+            })
+            .then(jsonUser => {
+                fullUserBuilder(jsonUser)
+            })
+    }
+
+    function fullUserBuilder(user) {
+        let fullInfo = document.createElement('div');
+        fullInfo.innerText = `${user.email} ${user.id}`;
+        fullInfo.style.backgroundColor = 'green';
+        fullInfo.style.margin = '40px';
+        document.body.appendChild(fullInfo)
+    }
+
+    /// КАРУСЕЛЬКА
+
+    // const divkas = document.getElementsByClassName('divo4ka');
+    // const leftBtn = document.getElementById('left');
+    // const rightBtn = document.getElementById('right');
+    // let j = 2;
+    //
+    // divkas[j].style.display = 'block';
+    //
+    // leftBtn.onclick = () => {
+    //     divkas[j].style.display = 'none';
+    //     j = j + 1;
+    //     if (j > divkas.length - 1) {
+    //         j = 0
+    //     }
+    //     divkas[j].style.display = 'block';
+    // }
+    //
+    // rightBtn.onclick = () => {
+    //     divkas[j].style.display = 'none';
+    //     j = j - 1;
+    //     if (j < 0) {
+    //         j = divkas.length - 1
+    //     }
+    //     divkas[j].style.display = 'block';
+    // }
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+a)  const father = {
+        fisrtName: 'Vasya',
+        export: function child(){
+            return this
+        }
+    }
+    console.log(user.export.firstName)
+
+b)  function f(){
+    console.log(this)
+}
+
+c) function f1(){
+    this.x = 5
+}
+
+    const o = new f1();
+    // console.log(o.x)
+
+d)  const user = {
+    name: 'vasya',
+    export: function(){
+        return this
+    }
+}
+    console.log(user.export().name)
+
+
+e) (function(){
+    console.log(this);
+})()
+
+f) const x = 5;
+    function f3(){
+        return this
+    }
+    const o = new f3();
+    console.log(o.x)
+
+
+</body>
+</html>
+<script src="trial.js"></script>
