@@ -8,31 +8,7 @@
         }
     },
     {
-        "key": "ctrl+alt+k",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus",
-        "args": {
-            "snippet": "console.time(); $1${TM_SELECTED_TEXT}; console.timeEnd();"
-        }
-    },
-    {
-        "key": "alt+s",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus",
-        "args": {
-            "snippet": "if(!$1) throw new Error('$2');"
-        }
-    },
-    {
-        "key": "ctrl+alt+s",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus",
-        "args": {
-            "snippet": "try{${TM_SELECTED_TEXT}$1} catch (e) {$2}"
-        }
-    },
-    {
-        "key": "alt+q",
+        "key": "alt+a",
         "command": "editor.action.insertSnippet",
         "when": "editorTextFocus",
         "args": {
@@ -40,29 +16,11 @@
         }
     },
     {
-        "key": "alt+a",
+        "key": "alt+q",
         "command": "editor.action.insertSnippet",
         "when": "editorTextFocus",
         "args": {
             "snippet": "const ${TM_SELECTED_TEXT}$1 = require('${TM_SELECTED_TEXT}$2')$3;"
-        }
-    },
-    {
-        "key": "alt+up",
-        "command": "workbench.action.terminal.focus",
-        "when": "!terminalFocus"
-    },
-    {
-        "key": "alt+up",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+alt+'",
-        "command": "editor.action.insertSnippet",
-        "when": "editorTextFocus",
-        "args": {
-            "snippet": "for (let i in $1){$2}"
         }
     },
     {
@@ -81,110 +39,4 @@
             "snippet": "for(let i = 0; i < $1.length; i++){$2}"
         }
     },
-    {
-        "key": "ctrl+d",
-        "command": "editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+down",
-        "command": "-editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+down",
-        "command": "editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+down",
-        "command": "-editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+up",
-        "command": "editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+up",
-        "command": "-editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+right",
-        "command": "workbench.action.nextEditor"
-    },
-    {
-        "key": "ctrl+pagedown",
-        "command": "-workbench.action.nextEditor"
-    },
-    {
-        "key": "alt+left",
-        "command": "workbench.action.previousEditor"
-    },
-    {
-        "key": "ctrl+pageup",
-        "command": "-workbench.action.previousEditor"
-    },
-    {
-        "key": "ctrl+d",
-        "command": "-editor.action.addSelectionToNextFindMatch",
-        "when": "editorFocus"
-    },
-    {
-        "key": "ctrl+;",
-        "command": "editor.action.deleteLines",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+k",
-        "command": "-editor.action.deleteLines",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+down",
-        "command": "workbench.action.navigateEditorGroups",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+alt+up",
-        "command": "workbench.action.toggleMaximizedPanel",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "alt+z",
-        "command": "workbench.action.terminal.toggleTerminal"
-    },
-    {
-        "key": "ctrl+`",
-        "command": "-workbench.action.terminal.toggleTerminal"
-    },
-    {
-        "key": "alt+x",
-        "command": "editor.action.revealDeclaration"
-    },
-    {
-        "key": "alt+x",
-        "command": "editor.action.goToDeclaration"
-    },
-    {
-        "key": "alt+x",
-        "command": "editor.action.previewDeclaration"
-    },
-    {
-        "key": "ctrl+f4",
-        "command": "workbench.action.closeGroup",
-        "when": "activeEditorGroupEmpty && multipleEditorGroups"
-    },
-    {
-        "key": "ctrl+f4",
-        "command": "-workbench.action.closeGroup",
-        "when": "activeEditorGroupEmpty && multipleEditorGroups"
-    },
-    // {
-    //  "key": "ctrl+space",
-    //  "command": "workbench.action.closeActiveEditor"
-    // },
-    
 ]

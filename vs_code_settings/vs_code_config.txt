@@ -1,7 +1,6 @@
 {
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "editor.fontSize": 18,
-    "workbench.iconTheme": "material-icon-theme",
     "editor.mouseWheelZoom": true,
     "editor.overviewRulerBorder": false,
     "editor.renderControlCharacters": true,
@@ -9,35 +8,36 @@
     "workbench.sideBar.location": "right",
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": true,
-    "terminal.integrated.fontSize": 20,
-    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.fontSize": 18,
+    // "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.cursorBlinking": true,
     "editor.wordWrap": "on",
-    "bracket-pair-colorizer-2.colors": ["#00C700", "#E30606", "#001EFF"],
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "editor.acceptSuggestionOnCommitCharacter": false,
-    "prettier.singleQuote": true,
-    "prettier.useTabs": true,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
     "editor.formatOnSave": true,
-    "prettier.tabWidth": 4,
     "editor.autoClosingBrackets": "always",
     "terminal.integrated.rendererType": "dom",
     "files.autoSave": "afterDelay",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "workbench.tree.renderIndentGuides": "always",
     "window.customMenuBarAltFocus": false,
-    "prettier.printWidth": 100,
+    "workbench.editor.enablePreview": false,
+    "workbench.startupEditor": "newUntitledFile",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "files.watcherExclude": {
         "**/.git/objects/**": true,
         "**/.git/subtree-cache/**": true,
         "**/node_modules/*/**": true
     },
-    "python.pythonPath": "/usr/bin/python3.7",
+    "prettier.singleQuote": true,
+    "prettier.useTabs": true,
+    "prettier.tabWidth": 4,
+    "prettier.printWidth": 100,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "workbench.colorTheme": "NetBeans Light Theme",
-    "workbench.editor.enablePreview": false
+    "workbench.iconTheme": "material-icon-theme",
+    "bracket-pair-colorizer-2.colors": ["#00C700", "#E30606", "#001EFF"],
 }
